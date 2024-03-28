@@ -1,0 +1,101 @@
+.subscribe {
+   width: 100%;
+}
+
+.subscribe_box {
+   width: 80%;
+   margin: 0 auto;
+   padding: 8rem 0;
+   display: grid;
+   grid-template-columns: 1.5fr 2fr;
+   align-items: center;
+}
+
+.subscribe_box_left h2 {
+   font-size: 3rem;
+   line-height: 0;
+}
+
+.subscribe_box p {
+   font-size: 1.2rem;
+}
+
+.subscribe_box_left_box {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-top: 2rem;
+}
+
+.subscribe_box_left_box small {
+   font-size: 1rem;
+   font-weight: 700;
+}
+
+.subscribe_box_left_box span {
+   background-color: var(--icons-color);
+   color: var(--main-bg-color);
+   padding: .5rem 1rem;
+   border-radius: 2rem;
+   width: 4rem;
+   text-align: center;
+}
+
+.subscribe_box_left_input {
+   margin-top: 3rem;
+   padding: 1rem;
+   width: 100%; /* Adjusted width to fill parent container */
+   border-radius: 4rem;
+   background-color: var(--icons-color);
+   color: var(--main-bg-color);
+   display: flex;
+   align-items: center;
+}
+
+.subscribe_box_left_input input {
+   background-color: transparent;
+   border: 0;
+   outline: none;
+   flex: 1; /* Allow input to grow and shrink */
+   padding: 0.5rem; /* Adjusted padding for better spacing */
+}
+
+.subscribe_box_left_input::placeholder {
+   color: var(--main-bg-color);
+   font-size: 1.2rem;
+}
+
+.subscribe_box_left_input_icon {
+   font-size: 2rem;
+}
+
+.subscribe_box_right {
+   max-width: 100%; /* Ensure the image does not exceed its container */
+}
+
+.subscribe_box_right img {
+   width: 100%; /* Make the image fill its container */
+   height: auto; /* Maintain aspect ratio */
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1024px) {
+   .subscribe_box {
+       width: 90%;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 4rem;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .subscribe_box_left h2 {
+       font-size: 2rem;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .subscribe_box {
+       grid-template-columns: 1fr;
+   }
+}

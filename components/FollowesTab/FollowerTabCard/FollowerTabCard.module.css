@@ -1,0 +1,186 @@
+/* .followerTabCard_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    position: relative;
+}
+
+.followerTabCard_box:hover {
+    box-shadow: var(--box-shadow)
+}
+
+.followerTabCard_rank {
+    position: absolute;
+    z-index: 11111;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    line-height: 0;
+    margin: 1rem;
+    font-size: .8rem;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--icons-color);
+    transition: all .3 ease-in;
+}
+.followerTabCard_rank:hover {
+    background-color: var(--main-bg-color);
+    color: var(--icons-color);
+}
+.followerTabCard_box_img {
+    grid-column: 1 / -1;
+}
+.followerTabCard_box_img_img {
+ border-radius: 2rem;
+} 
+
+.followerTabCard_box_profile {
+    grid-column: 1/ -1;
+    text-align: center;
+    margin-top: -2rem;
+    position: relative;
+}
+
+.followerTabCard_box_profile_img {
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 222;
+}
+.followerTabCard_box_profile::before {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    top: -20%;
+    left: 30%;
+
+}
+
+.followerTabCard_box_info {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    justify-content: space-between;
+    margin-top: -1rem;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+} */
+
+/* FollowerTabCard.module.css */
+
+.followerTabCard_box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column for mobile */
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    position: relative;
+}
+
+.followerTabCard_box:hover {
+    box-shadow: var(--box-shadow)
+}
+
+.followerTabCard_rank {
+    position: absolute;
+    z-index: 11111;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    line-height: 0;
+    margin: 1rem;
+    font-size: .8rem;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--icons-color);
+    transition: all .3 ease-in;
+}
+.followerTabCard_rank:hover {
+    background-color: var(--main-bg-color);
+    color: var(--icons-color);
+}
+
+
+
+@media (min-width: 768px) {
+  .followerTabCard_box {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and above */
+  }
+}
+
+@media (min-width: 1024px) {
+  .followerTabCard_box {
+    grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
+  }
+}
+
+.followerTabCard_box_img {
+    grid-column: 1 / -1;
+    padding: 0; /* Remove padding to prevent overflow */
+}
+
+.followerTabCard_box_img_img {
+    border-radius: 2rem;
+    width: 100%; /* Ensure the image takes the full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.followerTabCard_box_profile {
+    grid-column: 1/ -1;
+    text-align: center;
+    margin-top: -2rem;
+    position: relative;
+}
+
+/* .followerTabCard_box_profile::before {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 4rem;
+    background-color: var(--main-bg-color);
+    border-radius: 90%;
+    top: -20%;
+    left: 38%;
+
+} */
+
+.followerTabCard_box_profile_img {
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 222;
+    width: 76px; /* Adjust size for responsiveness */
+    height: 76px; /* Adjust size for responsiveness */
+    position: relative;
+    bottom: 26px;
+}
+
+.followerTabCard_box_info {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1rem;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+}
+
+.followerTabCard_box_info h4 {
+    font-size: 1rem;
+    line-height: 0;
+}
+
+.followerTabCard_box_info_following a{
+    background-color: var(--shadow-dark-color);
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--shadow-dark-color);
+    transition: all .3s ease-in;
+}
+
+.followerTabCard_box_info_following a:hover {
+    background-color: transparent;
+}
